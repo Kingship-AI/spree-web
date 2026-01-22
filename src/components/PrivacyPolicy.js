@@ -1,26 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './PrivacyPolicy.css';
-import spreeLogo from '../assets/spree-logo.png';
 
-const PrivacyPolicy = () => {
+function PrivacyPolicy() {
+  // URL of your terms and conditions PDF
+  const privacyUrl = 'https://drive.google.com/file/d/1zBmdBnvS512BzFOAzzlvWQI79Ee0jjZf/preview';
+
   return (
-    <div className="privacy-page">
-      <header className="privacy-header">
-        <Link to="/" className="privacy-logo-link">
-          <img src={spreeLogo} alt="Spree" className="privacy-logo" />
-        </Link>
-      </header>
-      <div className="privacy-container">
-        <h1>Privacy Policy</h1>
-        <p>Last updated: {new Date().toLocaleDateString()}</p>
-        <div className="privacy-content">
-          <p>Privacy Policy content will go here...</p>
-        </div>
-        <Link to="/" className="back-link">← Back to home</Link>
-      </div>
+    <div style={{
+      backgroundColor: "#1a1a1a", 
+      height: "100vh", 
+      width: "100vw",
+      margin: 0,
+      padding: 0,
+      position: "fixed",
+      top: 0,
+      left: 0
+    }}>
+      {/* Embedding the Privacy Policy PDF */}
+      <iframe 
+        src={privacyUrl} 
+        title="Privacy Policy" 
+        width="100%" 
+        height="100%"
+        style={{ border: "none" }}
+      ></iframe>
     </div>
   );
-};
+}
 
 export default PrivacyPolicy;

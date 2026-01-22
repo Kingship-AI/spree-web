@@ -24,29 +24,31 @@
 }
 
 .privacy-container h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .privacy-container > p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.875rem;
+  font-weight: 500;
   color: #666666;
   margin-bottom: 2rem;
 }
 
 .privacy-content {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.6;
   color: #333333;
   margin-bottom: 3rem;
 }
 
 .back-link {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   color: #FF3366;
   text-decoration: none;

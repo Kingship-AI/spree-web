@@ -1,26 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Terms.css';
-import spreeLogo from '../assets/spree-logo.png';
 
-const Terms = () => {
+function Terms() {
+  // URL of your terms and conditions PDF
+  const termsUrl = 'https://drive.google.com/file/d/1t5aYymSIXn9hA_kWMaMOVx8p0VsAQDWy/preview';
+
   return (
-    <div className="terms-page">
-      <header className="terms-header">
-        <Link to="/" className="terms-logo-link">
-          <img src={spreeLogo} alt="Spree" className="terms-logo" />
-        </Link>
-      </header>
-      <div className="terms-container">
-        <h1>Terms of Use</h1>
-        <p>Last updated: {new Date().toLocaleDateString()}</p>
-        <div className="terms-content">
-          <p>Terms of Use content will go here...</p>
-        </div>
-        <Link to="/" className="back-link">← Back to home</Link>
-      </div>
+    <div style={{
+      backgroundColor: "#1a1a1a", 
+      height: "100vh", 
+      width: "100vw",
+      margin: 0,
+      padding: 0,
+      position: "fixed",
+      top: 0,
+      left: 0
+    }}>
+      {/* Embedding the Terms and Conditions PDF */}
+      <iframe 
+        src={termsUrl} 
+        title="Terms and Conditions" 
+        width="100%" 
+        height="100%"
+        style={{ border: "none" }}
+      ></iframe>
     </div>
   );
-};
+}
 
 export default Terms;
