@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Team.css';
+import SEO from './SEO';
 import spreeLogo from '../assets/spree-logo.png';
 import appleLogo from '../assets/apple-logo.svg';
 import harrisonImage from '../assets/harrison_foko.jpg';
@@ -45,6 +46,11 @@ const Team = () => {
 
   return (
     <div className="team-page">
+      <SEO 
+        title="Team"
+        description="Meet the Spree team. We're building a personalized deal feed across stores, based in Silicon Valley."
+        path="/team"
+      />
       {/* Header */}
       <header className="team-header">
         <div className="team-header-container">

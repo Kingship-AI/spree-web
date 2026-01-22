@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
+import SEO from './SEO';
 import spreeLogo from '../assets/spree-logo.png';
 import phoneMockup from '../assets/phone-mockup.png';
 import appleLogo from '../assets/apple-logo.svg';
@@ -24,8 +25,71 @@ const LandingPage = () => {
     setIsModalOpen(true);
   };
 
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Spree free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Spree is free to download and use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do the deals come from?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We find deals across online stores and put the best options into one personalized feed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Spree personalize my feed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Based on your interests and what you tap, save, and share."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I buy directly in Spree?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can check out in the app for a fast, simple purchase experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What stores do you support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spree pulls deals from across the internet. Store coverage keeps expanding over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email us anytime at team@getspree.app."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="landing-page">
+      <SEO 
+        title="Spree - The best deals, in one feed"
+        description="Spree brings you the best deals from stores across the internet in one personalized feed. Save what you like, buy in seconds. Compare prices, read real reviews, and discover deals tailored to your interests."
+        path="/"
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(faqStructuredData)}
+      </script>
       {/* Header */}
       <header className="header">
         <div className="header-container">
@@ -150,7 +214,7 @@ const LandingPage = () => {
             </div>
             <div className="faq-item">
               <h3 className="faq-question">How do I get support?</h3>
-              <p className="faq-answer">Email us anytime at support@getspree.app.</p>
+              <p className="faq-answer">Email us anytime at team@getspree.app.</p>
             </div>
           </div>
         </div>
@@ -175,7 +239,7 @@ const LandingPage = () => {
         <div className="footer-container">
           <Link to="/terms" className="footer-link">Terms</Link>
           <Link to="/privacy-policy" className="footer-link">Privacy</Link>
-          <a href="mailto:support@getspree.app" className="footer-link">Support</a>
+          <a href="mailto:team@getspree.app" className="footer-link">Support</a>
           <Link to="/team" className="footer-link">Team</Link>
         </div>
       </footer>

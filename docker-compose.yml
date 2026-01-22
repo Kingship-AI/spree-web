@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  spree-web:
+    container_name: spree-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:443"
+    environment:
+      - NODE_ENV=production
+      - HTTPS=true
+      - GENERATE_SOURCEMAP=false
+    restart: unless-stopped

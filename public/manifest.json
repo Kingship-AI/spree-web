@@ -1,0 +1,16 @@
+{
+  "short_name": "Spree",
+  "name": "Spree - The best deals, in one feed",
+  "description": "Scroll a personalized deal feed from stores across the internet. Save what you like, buy in seconds.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FF3366",
+  "background_color": "#ffffff"
+}
