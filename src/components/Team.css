@@ -163,6 +163,20 @@
     padding: 1rem;
   }
 
+  .team-header-container {
+    padding: 0.75rem 1.25rem;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1rem;
+    justify-content: space-between; /* Logo on left, download on right */
+  }
+
+  .team-download-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem; /* Slightly smaller on mobile to fit */
+    white-space: nowrap; /* Prevent text wrapping */
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+
   .team-container {
     padding: 3rem 1rem;
   }
