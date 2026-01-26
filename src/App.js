@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage';
 import Terms from './components/Terms';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Team from './components/Team';
+import SharedProductPage from './components/SharedProductPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/share/:shareId" element={<SharedProductPage />} />
         </Routes>
       </Router>
     </HelmetProvider>
