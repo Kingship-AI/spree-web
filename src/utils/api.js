@@ -1,6 +1,5 @@
 // API utility for fetching shared products
-// Use relative URL when in production (proxied through nginx), or env var for development
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://4.242.5.141:8004/api';
 
 /**
  * Fetch a shared product by share_id

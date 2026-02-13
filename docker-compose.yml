@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_URL=http://4.242.5.141:8004/api
     ports:
       - "3000:443"
     environment:
@@ -12,6 +14,3 @@ services:
       - HTTPS=true
       - GENERATE_SOURCEMAP=false
     restart: unless-stopped
-    # Enable host.docker.internal for nginx to proxy to backend on host
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
