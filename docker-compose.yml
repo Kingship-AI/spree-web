@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - REACT_APP_API_URL=http://4.242.5.141:8004/api
+        - REACT_APP_API_URL=http://host.docker.internal:8004/api
     ports:
       - "3000:443"
     environment:
@@ -14,3 +14,6 @@ services:
       - HTTPS=true
       - GENERATE_SOURCEMAP=false
     restart: unless-stopped
+    # Add extra_hosts to enable host.docker.internal on Linux
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
