@@ -1,5 +1,5 @@
 // API utility for fetching shared products
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://4.242.5.141:8000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://4.242.5.141:8004/api';
 
 /**
  * Fetch a shared product by share_id
