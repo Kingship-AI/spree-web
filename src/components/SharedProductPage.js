@@ -86,7 +86,7 @@ const SharedProductPage = () => {
   const productImage = product.image || product.image_url || '';
   const productTitle = product.title || product.name || 'Product';
   const productPrice = product.price || '';
-  const whyText = product.why || product.reason || '';
+  const whyText = product.why_this_pick || product.whyThisPick || product.why || product.reason || '';
 
   // Open Graph meta tags
   const ogImage = productImage || 'https://getspree.app/spree-logo.png';
