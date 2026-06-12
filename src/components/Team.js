@@ -5,7 +5,6 @@ import SEO from './SEO';
 import spreeLogo from '../assets/spree-logo.png';
 import appleLogo from '../assets/apple-logo.svg';
 import harrisonImage from '../assets/harrison_foko.jpg';
-import yashImage from '../assets/yash_deshpande.png';
 import rahulImage from '../assets/rahul_sohandani.jpeg';
 import luvImage from '../assets/luv_patel.jpg';
 import ComingSoonModal from './ComingSoonModal';
@@ -25,20 +24,14 @@ const Team = () => {
       image: harrisonImage
     },
     {
-      name: 'Yash Deshpande',
-      role: 'Full stack engineer',
-      linkedin: 'https://www.linkedin.com/in/yash-deshpande5',
-      image: yashImage
-    },
-    {
       name: 'Luv Patel',
-      role: 'Full stack engineer',
+      role: 'Full Stack Engineer',
       linkedin: 'https://www.linkedin.com/in/luvpatel2001',
       image: luvImage
     },
     {
       name: 'Rahul Sohandani',
-      role: 'AI & data engineer',
+      role: 'AI & Data Engineer',
       linkedin: 'https://www.linkedin.com/in/rahul-sohandani-9645a8202',
       image: rahulImage
     }
