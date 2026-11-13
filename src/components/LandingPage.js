@@ -240,7 +240,6 @@ const LandingPage = () => {
           <Link to="/terms" className="footer-link">Terms</Link>
           <Link to="/privacy-policy" className="footer-link">Privacy</Link>
           <a href="mailto:team@getspree.app" className="footer-link">Support</a>
-          <Link to="/team" className="footer-link">Team</Link>
         </div>
       </footer>
 
